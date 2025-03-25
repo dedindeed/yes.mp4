@@ -1,0 +1,19 @@
+local player = game:GetService("Players").LocalPlayer
+local HttpService = game:GetService('HttpService')
+
+local ScreenGui = Instance.new("ScreenGui")
+local VideoScreen = Instance.new("VideoFrame")
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.IgnoreGuiInset = true
+ScreenGui.Name = "JeffTheKillerWuzHere"
+
+VideoScreen.Parent = ScreenGui
+VideoScreen.Size = UDim2.new(1,0,1,0)
+
+writefile("new.mp4", game:HttpGet("https://github.com/dedindeed/yes.mp4/blob/main/new.mp4?raw=true"))
+
+VideoScreen.Video = getcustomasset("new.mp4")
+
+VideoScreen.Looped = true
+VideoScreen.Playing = true
+VideoScreen.Volume = 10
